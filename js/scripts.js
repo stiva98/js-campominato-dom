@@ -1,4 +1,7 @@
 let square = 100;
+const arrBombRandom = [];
+let isGameRunning = true
+
 const gridContainer = document.querySelector('.container');
 const myForm = document.querySelector('.my-form');
 myForm.addEventListener('submit', function(event) {
@@ -10,7 +13,6 @@ myForm.addEventListener('submit', function(event) {
     if(mySelect == 'easy'){
         square = 100;
         const bomb = 16;
-        const arrBombRandom = [];
         while (arrBombRandom.length < bomb){
             const newBomb = randomNumber(1,square);
             if (arrBombRandom.includes(newBomb) == false) {
@@ -21,7 +23,6 @@ myForm.addEventListener('submit', function(event) {
     }else if (mySelect == 'medium'){
         square = 81
         const bomb = 16;
-        const arrBombRandom = [];
         while (arrBombRandom.length < bomb){
             const newBomb = randomNumber(1,square);
             if (arrBombRandom.includes(newBomb) == false) {
@@ -32,9 +33,8 @@ myForm.addEventListener('submit', function(event) {
     }else {
         square = 49;
         const bomb = 16;
-        const arrBombRandom = [];
         while (arrBombRandom.length < bomb){
-            const newBomb = randomNumber(1,square);
+            let newBomb = randomNumber(1,square);
             if (arrBombRandom.includes(newBomb) == false) {
                 arrBombRandom.push(newBomb);
                 console.log(newBomb)
@@ -54,8 +54,17 @@ myForm.addEventListener('submit', function(event) {
         newCell.append(i);
 
         newCell.addEventListener('click', function () {
-            newCell.classList.toggle('new-bg');
             console.log(newCell.innerHTML);
+            if(arrBombRandom.includes(i)){
+                newCell.classList.remove('new-bg');
+                newCell.classList.add('bomba');
+                isGameRunning = false;
+                alert('Hai perso!')
+                isGameRunning = false;
+            }else {
+                newCell.classList.add('new-bg');
+                isGameRunning = true;
+            }
         })
      
         gridContainer.append(newCell);
