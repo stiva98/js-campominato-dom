@@ -8,11 +8,38 @@ myForm.addEventListener('submit', function(event) {
     const mySelect = document.getElementById('difficults').value;
     //console.log(mySelect)
     if(mySelect == 'easy'){
-       square = 100; 
+        square = 100;
+        const bomb = 16;
+        const arrBombRandom = [];
+        while (arrBombRandom.length < bomb){
+            const newBomb = randomNumber(1,square);
+            if (arrBombRandom.includes(newBomb) == false) {
+                arrBombRandom.push(newBomb);
+                console.log(newBomb)
+            }
+        }
     }else if (mySelect == 'medium'){
-       square = 81
+        square = 81
+        const bomb = 16;
+        const arrBombRandom = [];
+        while (arrBombRandom.length < bomb){
+            const newBomb = randomNumber(1,square);
+            if (arrBombRandom.includes(newBomb) == false) {
+                arrBombRandom.push(newBomb);
+                console.log(newBomb)
+            }
+        }
     }else {
-       square = 49;
+        square = 49;
+        const bomb = 16;
+        const arrBombRandom = [];
+        while (arrBombRandom.length < bomb){
+            const newBomb = randomNumber(1,square);
+            if (arrBombRandom.includes(newBomb) == false) {
+                arrBombRandom.push(newBomb);
+                console.log(newBomb)
+            }
+        }
     }
 
     for (let i = 1; i <= square; i++) {
@@ -44,20 +71,8 @@ reset.addEventListener('click', function (){
 
 //Generazione di 16 numeri casuali e non ripetuti nella stessa cella
 
-const bomb = 16;
-
-const arrBombRandom = [];
-while (arrBombRandom.length < bomb){
-
-    const newBomb = randomNumber(1,100);
-    if (arrBombRandom.includes(newBomb) == false) {
-        arrBombRandom.push(newBomb);
-        console.log(newBomb)
-    }
-}
 
 
-16
 
 
 function randomNumber(min,max) {
