@@ -4,12 +4,14 @@ let isGameRunning = true
 let start = 0;
 let cell = 0;
 let maxNumber = 0;
+const score = document.getElementById('score');
 const gridContainer = document.querySelector('.container');
 const myForm = document.querySelector('.my-form');
 
 myForm.addEventListener('submit', function(event) {
     event.preventDefault();
     gridContainer.innerHTML = '';
+    score.innerHTML = 'SCORE: ' + cell;
     start ++;
     if(start == 2){
         location.reload();
@@ -77,6 +79,7 @@ myForm.addEventListener('submit', function(event) {
                     newCell.classList.add('new-bg');
                     isGameRunning = true;
                     cell++;
+                    score.innerHTML = 'SCORE: ' + cell;
                     if (cell == maxNumber){
                         return alert('hai vinto');
                     }

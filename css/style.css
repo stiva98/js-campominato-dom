@@ -21,8 +21,24 @@ body {
 .container-button {
     text-align: center;
 }
+.container-score {
+    height: 3.125rem;
+    width: 9.375rem;
+    border: .125rem solid #dcdcdc;
+    color:#777777;
+    background:linear-gradient(#ededed, #dfdfdf);
+    margin: .625rem auto;
+    border-radius: .9375rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container-score > p {
+    padding: .8125rem;
+}
 h1 {
     text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .my-button {
     margin: 20px auto;
@@ -32,12 +48,12 @@ h1 {
     border-width:1px;
     color:#777777;
     border-color:#dcdcdc;
-    font-weight:bold;
-    border-top-left-radius:6px;
-    border-top-right-radius:6px;
-    border-bottom-left-radius:6px;
-    border-bottom-right-radius:6px;
-    background:linear-gradient(#ededed, #dfdfdf);
+    font-weight: bold;
+    border-top-left-radius :6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: linear-gradient(#ededed, #dfdfdf);
     padding: 18px;
 }
 .cell {
@@ -75,6 +91,7 @@ h1 {
 }
 label {
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .bomba {
     background-color: red;
