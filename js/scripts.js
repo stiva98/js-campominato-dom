@@ -54,17 +54,21 @@ myForm.addEventListener('submit', function(event) {
         newCell.append(i);
 
         newCell.addEventListener('click', function () {
-            console.log(newCell.innerHTML);
-            if(arrBombRandom.includes(i)){
-                newCell.classList.remove('new-bg');
-                newCell.classList.add('bomba');
-                isGameRunning = false;
-                alert('Hai perso!')
-                isGameRunning = false;
-            }else {
-                newCell.classList.add('new-bg');
-                isGameRunning = true;
+            if(isGameRunning === false) {
+                // Stoppa il gioco
+                return
             }
+                console.log(newCell.innerHTML);
+                if(arrBombRandom.includes(i)){
+                    newCell.classList.remove('new-bg');
+                    newCell.classList.add('bomba');
+                    isGameRunning = false;
+                    alert('Hai perso!')
+                    isGameRunning = false;
+                }else {
+                    newCell.classList.add('new-bg');
+                    isGameRunning = true;
+                }
         })
      
         gridContainer.append(newCell);
