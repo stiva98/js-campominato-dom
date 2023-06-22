@@ -7,3 +7,72 @@ RESET
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-image: url(https://wallpapercave.com/wp/wp2383915.jpg);
+}
+.container {
+    max-width: 73.125rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container-button {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+.my-button {
+    margin: 20px auto;
+    font-size:15px;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#777777;
+    border-color:#dcdcdc;
+    font-weight:bold;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    background:linear-gradient(#ededed, #dfdfdf);
+    padding: 18px;
+}
+.cell {
+    width: calc(100% / 10);
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    color: white;
+}
+.cell-2 {
+    width: calc(100% / 9);
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    color: white;
+}
+.cell-3 {
+    width: calc(100% / 7);
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 2px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    color: white;
+}
+.new-bg {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+label {
+    color: white;
+}
